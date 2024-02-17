@@ -18,8 +18,8 @@ apigClientFactory.newClient = function (config) {
     var apigClient = { };
     if(config === undefined) {
         config = {
-            accessKey: 'AKIAW3MEA62MZEG7LD4K',
-            secretKey: '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',
+            accessKey: '',
+            secretKey: '',
             sessionToken: '',
             region: '',
             apiKey: undefined,
@@ -53,7 +53,7 @@ apigClientFactory.newClient = function (config) {
 
     
     // extract endpoint and path from url
-    var invokeUrl = 'https://bkebhlytc8.execute-api.us-east-1.amazonaws.com/stage1';
+    var invokeUrl = 'https://ut9k2wq912.execute-api.us-east-1.amazonaws.com/stage1';
     var endpoint = /(^https?:\/\/[^\/]+)/g.exec(invokeUrl)[1];
     var pathComponent = invokeUrl.substring(endpoint.length);
 
