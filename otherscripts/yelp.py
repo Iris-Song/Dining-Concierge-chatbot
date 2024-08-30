@@ -49,7 +49,7 @@ def addItems(table, data, location, cuisine):
                 
 
 if __name__=='__main__':
-    API_KEY = 'wHgN8o3nPrvifXQ42SFw6DYzLvkQqfwLdnaSJBuu4MubdJYi5Z1M4n3PS13fKwGEFNAVjPLVR-GWp1FE4MBXxVZYXH57QxYcQ52y47xOf3DykmArU1aQr5Ye7iXRZXYx'
+    API_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     API='https://api.yelp.com/v3/businesses/search'
 
     #dynamodb

@@ -190,7 +190,7 @@ def make_appointment(intent_request):
     sqs = boto3.client('sqs')
     
     sqs.send_message(
-        QueueUrl="https://sqs.us-east-1.amazonaws.com/471112677017/Q1",
+        QueueUrl="https://sqs.us-east-1.amazonaws.com/xxxxxx/Q1",
         MessageBody=messageBody
     )
     

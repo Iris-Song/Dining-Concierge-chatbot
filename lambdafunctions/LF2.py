@@ -8,7 +8,7 @@ import requests
 def sqs_msg():
     sqs = boto3.client('sqs')
     response = sqs.receive_message(
-        QueueUrl="https://sqs.us-east-1.amazonaws.com/471112677017/Q1",
+        QueueUrl="https://sqs.us-east-1.amazonaws.com/xxxxxxxxxx/Q1",
         AttributeNames=['SentTimestamp'],
         MaxNumberOfMessages=5,
         MessageAttributeNames=['All'],
@@ -22,7 +22,7 @@ def es_find_busID(cuisine):
     credentials = boto3.Session().get_credentials()
     auth = AWS4Auth(credentials.access_key, credentials.secret_key,
                     'us-east-1', 'es', session_token=credentials.token)
-    host = 'https://search-dining-sgk3trcjeib7qhmybkposuxqrm.us-east-1.es.amazonaws.com'
+    host = 'https://search-dining-xxxxxx.us-east-1.es.amazonaws.com'
     index = 'restaurants'
     type = 'Restaurant'
     url = host + '/' + index + '/' + type + '/_search'
@@ -101,7 +101,7 @@ def send_email(message, email):
 
 def delete_message(receipt_handle):
     sqs = boto3.client('sqs')
-    res = sqs.delete_message(QueueUrl='https://sqs.us-east-1.amazonaws.com/471112677017/Q1',
+    res = sqs.delete_message(QueueUrl='https://sqs.us-east-1.amazonaws.com/xxxxxx/Q1',
                        ReceiptHandle=receipt_handle
                        )
     print(res)
